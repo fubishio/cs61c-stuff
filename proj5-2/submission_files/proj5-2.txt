@@ -1,0 +1,26 @@
+1.
+Cluster 5
+Simple Facebook - 28.76 min
+Backedge Facebook - 30.05 min
+Simple Enron - 33.82 min
+Backedge Enron - 33.61 min
+
+Cluster 10
+Simple Facebook - 10.66 min
+Backedge Facebook - 15.21 min
+Simple Enron - 12.76 min
+Backedge Enron - 12.88 min
+
+
+2. facebook - 854 kb 
+   enron - 4000 kb
+   simple facebook 10 instance 500 repartition - 854.4/10.66 min = 854.4/639.6
+   simple enron 10 instance 500 repartition - 4000/12.76 min = 4000/765.6
+   No it does not meet my expectations
+
+
+3. The speedup for backedge enron from cluster of 10 to 5 is around 2.6x speedup. I think spark parrallelizes work just fine but that in and of itself is not enough to speed up work time because you can slow it down. I think the algorithm scales very well with strong scaling since increasing the amount of processors made it faster especially if its a multiple of 5 or 10 and not extremley high. I think in regards to weak scaling the solution time varies not that well since more speedup was seen when the number of processors  was a multiple of 5 or 10 and a single processor might not make it a multiple of 5 or 10
+
+4. Repartition count that was on average the fastest was 10. I think that if you lowered it, then the processing would not be split up enough and would slow down. If you made it too high, you would create too much work for managing the different processing units and would slow down
+
+5. I spent .5313 on part 5 which is around 3 hours and .6762 on part 4 since i used different amount of machines for the steps and had to calculate them seperately. The total is 1.2075
