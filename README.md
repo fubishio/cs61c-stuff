@@ -1,5 +1,5 @@
 # cs61c-stuff
-cs61c classwork with Professor Wawrzynek
+cs61c classwork with Professor Wawrzynek  
 proj1 BearGit - barebones version control that simply copies all files and labels with a commit  
 proj2-1 MIPS Assembler - two pass assembler that translates MIPS to machine code   
 proj2-2 MIPS Linker - processes output files and makes an executable file by combining the code and creating a symbol table  
